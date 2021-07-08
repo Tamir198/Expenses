@@ -29,9 +29,14 @@ const App = () => {
             date: new Date(2021, 5, 12),
         },
     ];
+
+    const addExpense = (expense)=>{
+        console.log("This is from app");
+        console.table(expense);
+    }
     return (
         <div>
-            <NewExpense></NewExpense>
+            <NewExpense onExpenseAdded={addExpense}></NewExpense>
             <ExpenseList items={expenses}/>
         </div>
     );

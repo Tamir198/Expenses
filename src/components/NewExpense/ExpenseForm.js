@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './ExpenseForm.css';
 
-const ExpenseForm = () => {
+const ExpenseForm = (props) => {
     const [enteredTitle,SetTitle] = useState(" ");
     const [enteredAmount,SetAmount] = useState(" ");
     const [enteredDate,SetDate] = useState(" ");
@@ -25,10 +25,10 @@ const ExpenseForm = () => {
             title: enteredTitle,
             amount: enteredAmount,
             date: Date(enteredDate)
-
-
         }
-        console.table(expentData);
+        
+        //Execute function recived from father class as pointer
+        props.onFormDataSaved(expentData);
         SetTitle(" ");
         SetAmount(" ");
         SetDate(" ");
