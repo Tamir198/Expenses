@@ -1,5 +1,5 @@
 
-import ExpenseList from './components/Expenses/ExpenseList';
+import ExpenseList from './components/Expenses/Expenses';
 import NewExpense from './components/NewExpense/NewExpense'
 
 import { useState } from 'react';
@@ -35,7 +35,6 @@ const DUMMY_DATA = [
 const App = () => {
   const [expenses, setNewExpenseList] = useState(DUMMY_DATA);
    
-
     const addExpense = (expense)=>{
       //Update the state based of previous state 
       setNewExpenseList((prevExpenses) => {
