@@ -24,7 +24,7 @@ const ExpenseForm = (props) => {
         const expentData = {
             title: enteredTitle,
             amount: enteredAmount,
-            date: Date(enteredDate)
+            date: new Date(enteredDate)
         }
         
         //Execute function recived from father class as pointer
